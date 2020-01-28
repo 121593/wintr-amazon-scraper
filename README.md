@@ -1,7 +1,7 @@
 # wintr-amazon-scraper
 
 
-[![Build status](https://gitlab.com/121593/wintr/badges/master/pipeline.svg)](https://gitlab.com/121593/wintr-amazon-scraper/pipelines)
+[![Build status](https://gitlab.com/121593/wintr-amazon-scraper/badges/master/pipeline.svg)](https://gitlab.com/121593/wintr-amazon-scraper/pipelines)
 [![npm version](https://badge.fury.io/js/wintr-amazon-scraper.svg)](https://badge.fury.io/js/wintr-amazon-scraper)
 [![Dependencies](https://david-dm.org/121593/wintr-amazon-scraper.svg)](https://david-dm.org/121593/wintr-amazon-scraper)
 [![ISC license](http://img.shields.io/badge/license-ISC-brightgreen.svg)](http://opensource.org/licenses/ISC)
