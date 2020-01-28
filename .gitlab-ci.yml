@@ -1,0 +1,27 @@
+image: node:12
+
+stages:
+  - build
+
+  - release
+
+cache:
+  paths:
+    - node_modules/
+
+install_dependencies:
+  stage: build
+  script:
+    - npm i --silent
+  artifacts:
+    paths:
+      - node_modules/
+
+release:
+  stage: release
+  only:
+    - master
+  before_script:
+    - npm install -g semantic-release @semantic-release/gitlab-config @semantic-release/npm
+  script:
+    - npm run release
