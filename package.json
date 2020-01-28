@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "wintr": "^1.1.0",
-    "amazon-url-builder": "^0.0.0"
+    "amazon-url-builder": "^0.0.1"
   },
   "description": "Amazon data scraper using Wintr API",
   "devDependencies": {
