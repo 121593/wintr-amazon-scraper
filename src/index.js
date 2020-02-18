@@ -1,4 +1,4 @@
-const { AmazonUrlBuilder } = require('../../amazon-url-builder/src')
+const { AmazonUrlBuilder } = require('amazon-url-builder')
 const { Wintr, constants } = require('wintr')
 const extractionSchemas = require('../src/schemas')
 
