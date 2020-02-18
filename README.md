@@ -23,15 +23,15 @@ const w = new WintrAmazonScraper(options)
 Where options are passed directly to Wintr ([details here](https://github.com/121593/wintr#options))
 
 ### Scraping
-Four methods are available for now :
+Four methods are available for now. Options such as the ones use for instantiation can be passed, overriding defaults.  
 
-- `getByProductId(id, options)` which returns parsed product information
+- `getByProductId(id, wintrOptions)` returns parsed product information
   
-- `getByQuery(searchTerm, options, rh)` which returns items found when asking for `searchTerm`. Can be narrow to a category using `rh` Amazon param
+- `getByQuery(searchTerm, wintrOptions, rh)` returns items found when asking for `searchTerm`. Can be narrowed down to a category using `rh` Amazon param
 
-- `getByNodeId(id, options)` which returns items found in "Node" page
+- `getByNodeId(id, wintrOptions)` returns items found in "Node" page
 
-- `getBestSellersByNodeSlug(nodeSlug, options)` which returns items found in "Category BestSellers" page formatted as
+- `getBestSellersByNodeSlug(nodeSlug, wintrOptions)` returns items found in "Category BestSellers" page
   
 When the result is split in various pages, a link for the next page is returned with the data
 
@@ -43,6 +43,24 @@ Use the repository for development
 An example application is included. Run it with : 
 
 `npm run dev`
+
+#### Usage example
+
+```javascript
+const { WintrAmazonScraper } = require('wintr-amazon-scraper')
+const { constants } = require('wintr')
+
+const w = new WintrAmazonScraper({
+ 	[constants.PARAMETERS.API_KEY]: 'XXX',
+ 	[constants.PARAMETERS.JS_RENDERING]: true
+})
+
+w.getByProductId('B07QY8LDGX')
+.then(console.log)
+.catch(err => {
+	console.log(err, err.response.data)
+})
+```
 
 ### Contributing
 Issue reports, pull requests, suggestions and comments are very welcome !
