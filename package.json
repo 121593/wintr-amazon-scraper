@@ -43,7 +43,7 @@
   "name": "wintr-amazon-scraper",
   "repository": {
     "type": "git",
-    "url": "git@github.com:121593/wintr-amazon-scraper.git"
+    "url": "https://github.com:121593/wintr-amazon-scraper.git"
   },
   "scripts": {
     "commit": "git-cz",
